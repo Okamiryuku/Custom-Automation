@@ -1,6 +1,9 @@
 import os
 import shutil
 
+DIRECTORIES = ['C:/Users/Okami/Downloads', 'E:/Downloads']
+DESTINATIONS = ['C:/Users/Okami/Downloads', 'E:/Downloads']
+
 
 def organize_directory(source_dir, destination_dir):
     # Create the destination directory if it doesn't exist
@@ -30,10 +33,11 @@ def organize_directory(source_dir, destination_dir):
 
 if __name__ == "__main__":
     # Specify the source and destination directories
-    source_directory = "C:/Users/Okami/Downloads"
-    destination_directory = "C:/Users/Okami/Downloads"
+    for n in range(len(DIRECTORIES)):
+        source_directory = DIRECTORIES[n - 1]
+        destination_directory = DESTINATIONS[n - 1]
 
-    # Organize the directory
-    organize_directory(source_directory, destination_directory)
+        # Organize the directory
+        organize_directory(source_directory, destination_directory)
 
-    print(f"Files organized in {destination_directory}")
+        print(f"Files organized in {destination_directory}")
