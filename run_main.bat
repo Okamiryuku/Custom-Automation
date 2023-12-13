@@ -1,2 +1,3 @@
-"E:\UDEMY\Python\Portafolio\custom_automation\main.py"
-pause
+@echo off
+cmd /k ".\venv\Scripts\activate & python main.py"
+
